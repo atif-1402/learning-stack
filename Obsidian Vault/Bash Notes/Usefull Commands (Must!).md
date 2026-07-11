@@ -52,3 +52,53 @@ we can translate our text in many ways with tr check the MAN page for it
 
 ---
 ## 3. sed
+
+it is a stream editor and text transformer. the syntax is simple 
+
+```bash
+sed 's/OLD/NEW/flag'
+```
+
+lets talk about falgs in sed 
+
+s/ - it means substitute 
+
+### p - this is use to print the chosen line only this below example print only 2 cause there is another flag -n
+
+```bash
+(
+	echo "Biryani"
+	echo "Chicken-tikka"
+) | sed -n '2p'
+```
+
+### -n - this say to print nothing until user specify you can see above example where we use -n to print nothing and then 2p to just print second line
+
+### d - this is use to delete the specific line to stop printing it like in below example it is gonna delete the second line  
+
+```bash
+(
+	echo "Biryani"
+	echo "Chicken-tikka"
+) | sed '2d'
+```
+
+/i - this is ignore which ignore the letter cases mean upper case or lower case like in below example it is gonna igonre the cases
+
+```bash
+echo "Biryani Chicken Steak" | sed 's/biryani/korma/i'
+```
+
+/g - this is global which is gonna change the text globally defauly it just change the first selected word but if the same word is somewhere else this is gonna change it too
+
+```bash
+echo "biryani korma kebab steak biryani" | sed 's/biryani/lamb/g'
+```
+
+-i - it is use to edit file using sed currently we just use it to modify result but we can edit it too see the below example
+
+```bash
+sed -i 's/OLD/NEW/flag' file.txt
+```
+---
+## 4. awk
