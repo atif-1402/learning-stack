@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+if [[ -d .git ]]; then
+  :
+else
+  echo ".git folder not found"
+  exit 1
+fi
+
+if [[ -n $1 ]]; then
+  commit=$1
+else
+  read -p "Describe Changes: " commit
+fi
+
+git add .
+git commit -m "$commit"
+git push
+
+echo
+read -p "Want to know git status? (y/n): " gitstatus
+
+case $gitstatus in
+y | yes | YES | Yes | Y | yEs | YeS)
+  git status
+  ;;
+n | no | NO | No | nO | N)
+  exit 1
+  ;;
+*)
+  git status
+  ;;
+esac

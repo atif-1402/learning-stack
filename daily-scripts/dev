@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+
+loading() {
+  echo -ne "\r Loading"
+  sleep 0.25
+  echo -ne "\r Loading"
+  sleep 0.25
+  echo -ne "\r Loading"
+  sleep 0.25
+  echo -ne "\r Loading"
+  sleep 0.25
+  echo -ne "\r Loading"
+  sleep 0.25
+  echo -ne "\r Loading"
+  echo -ne "\r\033[2K"
+}
+
+sff=" Site Folder Files "
+gs=" Git Status "
+lc="󰜘 Last Commit "
+
+for dev in "$@"; do
+  case "$dev" in
+  "-project site")
+    loading
+    echo "$sff"
+    ls ~/anom/
+    echo
+    echo "$gs"
+    git -C ~/anom status
+    echo
+    echo "$lc"
+    git -C ~/anom log --oneline -1
+    ;;
+  esac
+done

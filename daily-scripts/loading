@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+for dev in "$@"; do
+  case "$dev" in
+  site)
+    echo -ne "\r Loading"
+    sleep 0.5
+    echo -ne "\r Loading"
+    sleep 0.5
+    echo -ne "\r Loading"
+    sleep 0.5
+    echo -ne "\r Loading"
+    sleep 0.5
+    echo -ne "\r Loading"
+    sleep 0.5
+    echo -ne "\r\033[2K Loading"
+
+    echo "Yay Loading works"
+    ;;
+  esac
+done

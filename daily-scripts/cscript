@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+if [[ -n $1 ]]; then
+  script=$1
+else
+  read -p 'Enter Script Name: ' script
+fi
+
+touch $script
+chmod +x $script
+
+echo "#!/usr/bin/env bash" >>$script
