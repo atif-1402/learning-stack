@@ -1,0 +1,222 @@
+{
+  "main": {
+    "id": "7e7a718a4f8b48b3",
+    "type": "split",
+    "children": [
+      {
+        "id": "6dc5fc81ffc902fe",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "598446a88351a7dc",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "8081f73f58da9439",
+    "type": "split",
+    "children": [
+      {
+        "id": "10de4660e836ef1b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "478dd1705d76196c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "53c9188bf2b4398d",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "364523d2dc3dacbb",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "3658c83e20e7622b",
+    "type": "split",
+    "children": [
+      {
+        "id": "2df87067c85b51e5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "324a7dbfeb0114cc",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Bash Notes/Conditionals.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Conditionals"
+            }
+          },
+          {
+            "id": "b5bad9a1bb07f756",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "K&R C/K&R C - Map of Content.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from K&R C - Map of Content"
+            }
+          },
+          {
+            "id": "f6d153e02c98b10c",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "0bd83d7bd343d90c",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "9b3c9ac811431d75",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "K&R C/K&R C - Map of Content.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of K&R C - Map of Content"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "graph:Open graph view": false,
+      "switcher:Open quick switcher": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "598446a88351a7dc",
+  "lastOpenFiles": [
+    "Bash Notes/Usefull Commands (Must!).md",
+    "Bash Notes/1. Introduction.md",
+    "Bash Notes/Process Substitution.md",
+    "Bash Notes/Pagers.md",
+    "Bash Notes/If Else statements.md",
+    "Bash Notes/Arrays.md",
+    "Bash Notes/Arithmetic Expressions in Bash.md",
+    "Bash Notes/Case Statements.md",
+    "Bash Notes/IFS Vars.md",
+    "Bash Notes/Conditionals.md",
+    "Bash Notes/Functions.md",
+    "Bash Notes/Loops.md",
+    "Pasted image 20260702164843.png",
+    "Bash Notes/Man Pages (manuals of tui).md",
+    "Pasted image 20260703005136.png",
+    "Pasted image 20260703010522.png",
+    "Bash-Notes/Pagers.md",
+    "Bash-Notes",
+    "Bash.md",
+    "Pagers.md",
+    "Untitled",
+    "Bash Notes",
+    "K&R C/K&R C - Map of Content.md",
+    "Learning C/2) Varibles in C.md",
+    "K&R C/01 - Chapter 1 - A Tutorial Introduction.md",
+    "K&R C/02 - Chapter 2 - Types Operators and Expressions.md",
+    "K&R C/00 - Preface.md",
+    "Learning C/1) The Basic of C.md",
+    "K&R C/11 - Appendix C - Summary of Changes.md",
+    "K&R C/10 - Appendix B - Standard Library.md",
+    "K&R C/09 - Appendix A - Reference Manual.md",
+    "K&R C/08 - Chapter 8 - The UNIX System Interface.md",
+    "K&R C",
+    "Learning C/K&R C Programming Language",
+    "Quickshell/handson",
+    "Quickshell",
+    "Learning C"
+  ]
+}

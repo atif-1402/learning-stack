@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+if [[ -n $1 ]]; then
+  name=$1
+else
+  read -p 'Enter File/dir name: ' name
+fi
+
+if [[ -f $name ]]; then
+  echo "It's a file"
+elif [[ -d $name ]]; then
+  echo "It's a directory"
+else
+  echo "Doesn't Exsist"
+fi

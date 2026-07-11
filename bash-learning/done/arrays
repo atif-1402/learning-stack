@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+#!/usr/bin/env bash
+
+declare -A laptop
+
+laptop[cpu]="i5-5300U"
+laptop[ram]="8GB"
+laptop[ssd]="256GB"
+
+features=("WiFi" "Bluetooth" "Webcam")
+
+for key in "${!laptop[@]}"; do
+  echo "=== Laptop Specs ==="
+  echo "$key : ${laptop[$key]}"
+done

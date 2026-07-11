@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+array=(
+  "biryani"
+  "korma"
+  "Chicken Tikka"
+  "Butter Chicken"
+)
+
+IFS=","
+
+echo "${!array[*]}"

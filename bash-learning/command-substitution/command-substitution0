@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+i=5
+
+my-func() {
+  local result="apple"
+  echo "$result"
+}
+
+result="banana"
+
+my-func
+
+echo "$result"

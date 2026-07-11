@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>exercise</title>
+        <style>
+            * {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .pfp {
+                width: 60px;
+                height: 60px;
+                vertical-align: middle;
+                object-fit: cover;
+                border: none;
+                border-radius: 99px;
+            }
+
+            .inp {
+                vertical-align: middle;
+                font-size: 20px;
+                border: none;
+            }
+
+            .bt-tweet {
+                background-color: #218eed;
+                color: white;
+                font-size: 18px;
+                height: 42px;
+                width: 90px;
+                border-color: transparent;
+                border-radius: 32px;
+                margin: 10px 10px 0px 10px;
+                cursor: pointer;
+                font-weight: bold;
+                transition: all 200ms ease-in-out;
+            }
+          
+            .bt-tweet:hover {
+                /* background-color: rgba(33, 142, 237, 0.712); */
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15) ;
+            }
+
+            .tweet-box {
+                border: none;
+                border-radius: 8px;
+                box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.35);
+                width: 360px;
+                padding: 6px 8px 6px 8px ;
+            }
+
+            .pfp-cont,
+            .button-cont,
+            .info-cont {
+                display: inline-block;
+            }
+
+            .button-cont {
+                width: 110px;
+            }
+
+            .info-cont {
+                vertical-align: top;
+                margin-left: 6px;
+            }
+
+            .title {
+                font-size: 20px;
+                margin-top: 3px;
+                font-weight: 600;
+                margin-bottom: 0;
+            }
+
+            .anm,
+            .stats {
+                color: #8e8e8e;
+                margin-top: 6px;
+                line-height: 4px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="tweet-box">
+        <div class="pfp-cont">
+            <img class="pfp" src="../thumbnails/thumb2.jpg">
+        </div>
+        <div class="info-cont">
+            <p class="title">
+                Oliver
+            </p>
+            <p class="anm">
+                The cat
+            </p>
+            <p class="stats">
+                Popular
+            </p>
+        </div>
+        <div class="button-cont"></div>
+            <button class="bt-tweet">Tweet</button>
+        </div>
+    </body>
+</html>

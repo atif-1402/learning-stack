@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+if [[ -n $1 ]]; then
+  star=$1
+else
+  read -p 'Enter a number: ' star
+fi
+
+for ((i = 1; i <= star; i++)); do
+  echo "$i"
+done

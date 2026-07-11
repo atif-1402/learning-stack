@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+echo "=======MENU======="
+echo "------------------"
+echo "------1.Date------"
+echo "--2.Current-Dir---"
+echo "----3.Username----"
+echo "------4.exit------"
+echo "=================="
+
+read -p '(1,2,3,4): ' sel
+
+case "$sel" in
+1)
+  echo "Today is $(date +%D)"
+  ;;
+2)
+  echo "You are in - $(pwd)"
+  ;;
+3)
+  echo "Current Username is $(whoami)"
+  ;;
+4)
+  echo "Bye!"
+  exit 0
+  ;;
+*)
+  echo "Unknown Option"
+  ;;
+esac

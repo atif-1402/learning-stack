@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+read -p 'Enter first Digit: ' fdig
+read -p 'Enter Operator (+,-,*,/,%): ' ops
+read -p 'Enter second Digit: ' ldig
+
+case "$ops" in
+
++)
+  echo "$fdig $ops $ldig = $((fdig + ldig))"
+  ;;
+-)
+  echo "$fdig $ops $ldig = $((fdig - ldig))"
+  ;;
+"*")
+  echo "$fdig $ops $ldig = $((fdig * ldig))"
+  ;;
+/)
+  echo "$fdig $ops $ldig = $((fdig / ldig))"
+  ;;
+%)
+  echo "$fdig $ops $ldig = $((fdig % ldig))"
+  ;;
+*)
+  echo "Unknown Operator"
+  ;;
+esac

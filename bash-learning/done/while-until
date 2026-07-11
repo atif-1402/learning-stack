@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+if [[ -n $1 ]]; then
+  filename=$1
+else
+  read -p 'Enter File Name: ' filename
+fi
+
+while [[ -s $filename ]]; do
+  echo "The File Exist"
+  sleep 1
+done
+
+echo "who dumped that shit"

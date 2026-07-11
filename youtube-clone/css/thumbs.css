@@ -1,0 +1,19 @@
+.thumbs {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.vid-pfp {
+    margin-top: 10px;
+}
+
+.vid-info {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.pfp {
+    width: 100%;
+    border: none;
+    border-radius: 64px;
+}

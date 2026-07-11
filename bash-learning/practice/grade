@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+read -p "Enter Student's Name: " name
+read -p "Enter Marks out of 100: " marks
+
+if ((marks >= 90)); then
+  grade=A
+elif ((marks >= 75)); then
+  grade=B
+elif ((marks >= 50)); then
+  grade=C
+else
+  grade=FAIL
+fi
+
+echo
+echo "=======Report======="
+echo "Student: $name"
+echo "Marks: $marks"
+echo "Grade: $grade"

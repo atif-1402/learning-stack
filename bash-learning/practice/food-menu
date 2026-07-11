@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+
+foods=(
+  "Biryani"
+  "Korma"
+  "Butter Chicken"
+)
+
+food_menu() {
+  echo "===== Food Menu ====="
+  echo "1. Show Food"
+  echo "2. Add Food"
+  echo "3. exit"
+}
+
+show_food() {
+  for idx in ${!foods[@]}; do
+    echo "$((idx + 1)). ${foods[$idx]}"
+  done
+}
+
+food_menu
+read -p "Select Option (1/2/3): " option
+
+case $option in
+1)
+  show_food
+  ;;
+2)
+  read -p "Add food: " add
+  foods+=("$add")
+  show_food
+  ;;
+3)
+  echo "Bye!"
+  exit 0
+  ;;
+*)
+  echo "Invalid Option"
+  exit 1
+  ;;
+esac
+
+# END

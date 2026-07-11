@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+s='atif'
+
+case "$s" in
+atif | a* | *f)
+  echo "Hello $s"
+  ;;
+*)
+  echo "didnt match i think"
+  ;;
+esac

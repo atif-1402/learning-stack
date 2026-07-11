@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+for food in "$@"; do
+  echo "Your fave food is $food"
+done

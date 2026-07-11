@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+food=("chicken" "lamb" "wagyu-beef" "biryani")
+
+for idx in "${!food[@]}"; do
+  echo "$((idx + 1)). ${food[$idx]}"
+done

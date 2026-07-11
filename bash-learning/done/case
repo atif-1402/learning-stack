@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+hello() {
+  local s=$1
+  echo "Hello $s!"
+}
+
+goodbye() {
+  local s=$1
+  echo "Goodbye $s!"
+}
+
+if (($# == 0)); then
+  echo "Didnt anyone name you?"
+fi
+
+for name in "$@"; do
+  case "$name" in
+  a* | u* | A* | U*)
+    hello "$name"
+    ;;
+
+  *)
+    goodbye "$name"
+    ;;
+  esac
+done

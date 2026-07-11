@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+if [[ -n $1 ]]; then
+  num=$1
+else
+  read -p 'Enter a number: ' num
+fi
+
+for ((i = 1; i <= 10; i++)); do
+  echo "$num x $i = $((num * i))"
+done

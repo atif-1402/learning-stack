@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+if [[ -n $1 ]]; then
+  dir=$1
+else
+  read -p 'Enter directory path: ' dir
+fi
+
+if [[ -d $dir ]]; then
+  echo "directory found"
+else
+  echo "No such directory"
+fi
+
+count=0
+
+for item in $dir/*; do
+  if [[ -f $item ]]; then
+    echo "$item - file"
+  elif [[ -d $item ]]; then
+    echo "$item - directory"
+  fi
+  count=$((count + 1))
+done
+
+echo "Total: $count Item found"

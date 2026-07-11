@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+declare -A laptop
+
+laptop[cpu]="i5-5300U"
+laptop[ram]="16GB"
+
+search=gpu
+
+for key in "${!laptop[@]}"; do
+  if [[ $search == $key ]]; then
+    echo "${laptop[$search]}"
+  else
+    echo "$search not found "
+  fi
+done

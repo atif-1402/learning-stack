@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+read -p 'Enter the value of A: ' val_a
+read -p 'Enter the calue of B: ' val_b
+
+a=$val_a
+b=$val_b
+
+if [[ $a == $b ]]; then
+  echo "The values are same"
+else
+  echo "The values are not same"
+fi
+
+read -p 'File Checker - Enter file name: ' filename
+
+if [[ -f $filename ]]; then
+  echo "The file exist"
+else
+  echo "The file do not exist"
+fi

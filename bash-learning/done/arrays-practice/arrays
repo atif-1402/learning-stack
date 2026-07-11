@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+declare -A laptop
+
+laptop[cpu]="i5-5300U"
+laptop[ram]="8GB"
+laptop[ssd]="256GB"
+
+features=("WiFi" "Bluetooth" "Webcam")
+
+echo "=== Laptop Specs ==="
+for key in "${!laptop[@]}"; do
+  echo "$key : ${laptop[$key]}"
+done
+echo
+echo "=== Features ==="
+for idx in "${!features[@]}"; do
+  echo "$((idx + 1)). ${features[$idx]}"
+done

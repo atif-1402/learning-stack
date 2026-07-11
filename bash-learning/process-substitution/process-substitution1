@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+i=0
+
+grep d words.txt | while read -r word; do
+  echo "$word"
+  ((i++))
+done
+
+echo "found $i"

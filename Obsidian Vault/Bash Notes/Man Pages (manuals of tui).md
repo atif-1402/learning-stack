@@ -1,0 +1,1 @@
+This thing is really a Man it gives a complete manual of each command like we can run `man man` to get its own shit manual it is awesome and usefull you need that 

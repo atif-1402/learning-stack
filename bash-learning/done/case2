@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+if [[ -n $1 ]]; then
+  fname=$1
+else
+  read -p 'Enter filename: ' fname
+fi
+
+case "$fname" in
+*.txt)
+  echo "Text File"
+  ;;
+
+*.png | *.jpg | *.webp | *.jpeg)
+  echo "Image File"
+  ;;
+
+*.mp3)
+  echo "Audio File"
+  ;;
+
+*.mp4)
+  echo "Video File"
+  ;;
+esac

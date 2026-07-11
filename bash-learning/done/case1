@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+for name in "$@"; do
+  case "$name" in
+  admin | Admin)
+    echo "Welcome, Administrator"
+    ;;
+  guest | Guest)
+    echo "Welcome, Guest"
+    ;;
+  atif | Atif)
+    echo "Welcome Back, Atif"
+    ;;
+  esac
+done
