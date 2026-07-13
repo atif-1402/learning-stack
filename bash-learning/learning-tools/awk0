@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+awk-func() {
+  awk -F',' '
+
+    BEGIN {
+      print "=====FOODS====="
+    }
+
+    {
+      print $1 " - " $2
+    }
+
+    {
+      total += $2
+      count++
+    }
+
+    END {
+      print "total items " count
+      print "Bill: $" total
+    }'
+}
+
+(
+  echo "Biryani,60"
+  echo "Korma,80"
+  echo "Chicken-tikka,100"
+) | awk-func

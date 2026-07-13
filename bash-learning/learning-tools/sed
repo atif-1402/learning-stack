@@ -4,9 +4,5 @@
   echo "biryani"
   echo "chicken-tikka"
   echo "kebab"
-) | sed -n '3p'
-
-echo
-echo
-
-echo "biryani chicken-tikka kebab" | sed 's/chicken-tikka//'
+  echo "korma"
+) | sed '2d'

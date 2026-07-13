@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+awk-func() {
+  awk 'BEGIN {
+    printf "Biryani\n"
+    printf "Korma\n"
+  }'
+}
+
+awk-func

@@ -102,3 +102,577 @@ sed -i 's/OLD/NEW/flag' file.txt
 ```
 ---
 ## 4. awk
+
+it is a text-processing language used for extracting,analyzing, formatting, and reporting structured text.
+
+---
+
+# What is AWK?
+
+Think of the Unix tools like this:
+
+| Tool | Purpose |
+|------|---------|
+| `cut` | Extract columns |
+| `tr` | Transform characters |
+| `sed` | Edit text |
+| `awk` | Process structured text |
+
+Common uses:
+
+- CSV files
+- Log files
+- Reports
+- Counting
+- Filtering
+- Formatting
+- Statistics
+
+---
+
+# Basic Syntax
+
+```bash
+awk 'program' file
+```
+
+Example:
+
+```bash
+awk '{ print }' file.txt
+```
+
+Print every line.
+
+---
+
+# Field Separator
+
+Default separator = whitespace.
+
+Use `-F` to specify one.
+
+Comma:
+
+```bash
+awk -F',' '{ print $1 }' menu.csv
+```
+
+Colon:
+
+```bash
+awk -F':' '{ print $1 }' /etc/passwd
+```
+
+Pipe:
+
+```bash
+awk -F'|' '{ print $2 }' file.txt
+```
+
+---
+
+# Fields
+
+```
+$1
+```
+
+First field.
+
+```
+$2
+```
+
+Second field.
+
+```
+$3
+```
+
+Third field.
+
+...
+
+```
+$NF
+```
+
+Last field.
+
+---
+
+Example
+
+Input
+
+```text
+Biryani,250
+Korma,180
+Kebab,120
+```
+
+```bash
+awk -F',' '{ print $1 }'
+```
+
+Output
+
+```text
+Biryani
+Korma
+Kebab
+```
+
+---
+
+# Built-in Variables
+
+## NR
+
+Current Record Number (Current Line)
+
+Example
+
+```bash
+awk -F',' '{ print NR, $1 }'
+```
+
+Output
+
+```text
+1 Biryani
+2 Korma
+3 Kebab
+```
+
+---
+
+## NF
+
+Number of Fields.
+
+Input
+
+```text
+Biryani,250,Chicken
+Korma,180
+Kebab
+```
+
+```bash
+awk -F',' '{ print NF }'
+```
+
+Output
+
+```text
+3
+2
+1
+```
+
+---
+
+## $NF
+
+Print last field.
+
+Input
+
+```text
+Biryani,250,Chicken
+Korma,180
+Kebab,120,Beef,Spicy
+```
+
+```bash
+awk -F',' '{ print $NF }'
+```
+
+Output
+
+```text
+Chicken
+180
+Spicy
+```
+
+---
+
+# BEGIN
+
+Runs once before processing input.
+
+```awk
+BEGIN {
+    print "===== MENU ====="
+}
+```
+
+---
+
+# Processing Block
+
+Runs for EVERY line.
+
+```awk
+{
+    print $1
+}
+```
+
+---
+
+# END
+
+Runs once after all lines.
+
+```awk
+END {
+    print "Finished"
+}
+```
+
+---
+
+Execution Order
+
+```
+BEGIN
+
+↓
+
+Line 1
+
+↓
+
+Line 2
+
+↓
+
+Line 3
+
+↓
+
+END
+```
+
+---
+
+# Variables
+
+Variables don't require declaration.
+
+```awk
+price = $2
+```
+
+```awk
+item = $1
+```
+
+---
+
+# Arithmetic
+
+```awk
+print $2 + 50
+```
+
+```awk
+print $2 - 20
+```
+
+```awk
+print $2 * 2
+```
+
+```awk
+print $2 / 10
+```
+
+AWK automatically treats numeric fields as numbers.
+
+---
+
+# Counting
+
+```awk
+{
+    count++
+}
+
+END {
+    print count
+}
+```
+
+---
+
+# Sum
+
+```awk
+{
+    total += $2
+}
+
+END {
+    print total
+}
+```
+
+---
+
+# Average
+
+```awk
+{
+    total += $2
+    count++
+}
+
+END {
+    print total / count
+}
+```
+
+---
+
+# Conditions
+
+Short form
+
+```awk
+$2 >= 200 {
+    print $1
+}
+```
+
+Meaning
+
+```
+If field 2 >= 200
+
+↓
+
+Print field 1
+```
+
+---
+
+# if
+
+```awk
+{
+    if ($2 >= 200) {
+        print $1
+    }
+}
+```
+
+---
+
+# if / else
+
+```awk
+{
+    if ($2 >= 200) {
+        print "Expensive"
+    } else {
+        print "Affordable"
+    }
+}
+```
+
+---
+
+# Pattern Matching
+
+General syntax
+
+```awk
+/pattern/ {
+    action
+}
+```
+
+Example
+
+```awk
+/Kebab/ {
+    print
+}
+```
+
+Meaning
+
+```
+If line contains Kebab
+
+↓
+
+Print line
+```
+
+---
+
+# print
+
+Simple output.
+
+```awk
+print $1
+```
+
+Automatically adds newline.
+
+---
+
+# printf
+
+Formatted output.
+
+```awk
+printf "%s costs ₹%d\n", $1, $2
+```
+
+Unlike `print`, `printf` does **NOT** add a newline automatically.
+
+---
+
+## Common Format Specifiers
+
+String
+
+```awk
+%s
+```
+
+Integer
+
+```awk
+%d
+```
+
+Float
+
+```awk
+%f
+```
+
+---
+
+Example
+
+```awk
+printf "%s costs ₹%d\n", $1, $2
+```
+
+Output
+
+```
+Biryani costs ₹250
+```
+
+---
+
+# Full Example
+
+```awk
+awk -F',' '
+
+BEGIN {
+    printf "====== MENU ======\n"
+}
+
+{
+    printf "%s costs ₹%d\n", $1, $2
+
+    count++
+    total += $2
+}
+
+END {
+    printf "------------------\n"
+    printf "Items   : %d\n", count
+    printf "Total   : ₹%d\n", total
+    printf "Average : %.1f\n", total / count
+}
+' menu.csv
+```
+
+---
+
+# Flow
+
+```
+Read Line
+
+↓
+
+Split into Fields
+
+↓
+
+Run Program
+
+↓
+
+Repeat
+
+↓
+
+END
+```
+
+---
+
+# Quick Cheat Sheet
+
+| Expression | Meaning |
+|------------|---------|
+| `-F','` | Field Separator |
+| `$1` | First Field |
+| `$2` | Second Field |
+| `$NF` | Last Field |
+| `NR` | Current Line Number |
+| `NF` | Number of Fields |
+| `BEGIN` | Before Processing |
+| `END` | After Processing |
+| `print` | Simple Output |
+| `printf` | Formatted Output |
+| `count++` | Increment Counter |
+| `total += $2` | Sum Values |
+| `/pattern/` | Match Lines |
+| `if` | Conditional |
+| `else` | Alternative Branch |
+
+---
+
+# Things We Built
+
+- Menu Analyzer
+- Price Filter
+- Total Calculator
+- Average Calculator
+
+---
+
+# Remember
+
+You DO NOT need to memorize every AWK feature.
+
+Know these well:
+
+- Fields
+- Variables
+- BEGIN / END
+- NR / NF / $NF
+- Conditions
+- Counting
+- Summing
+- Average
+- print / printf
+
+Everything else can be looked up when needed.

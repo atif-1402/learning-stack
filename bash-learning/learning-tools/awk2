@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+awk_func() {
+  awk -F',' '
+  BEGIN {
+    printf "======MENU======\n"
+  }
+
+  {
+  if ($2 >= 200) {
+      printf "%s costs ₹%d\n", $1, $2
+      count++
+      total+= $2
+    }
+  }
+  END {
+    printf "----------------\n"
+    printf "Items : " count "\n"
+    printf "Total : ₹" total "\n"
+  }'
+}
+
+cat ../assets/menu.csv | awk_func
