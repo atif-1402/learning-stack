@@ -650,29 +650,88 @@ END
 
 ---
 
-# Things We Built
+## 5. find 
 
-- Menu Analyzer
-- Price Filter
-- Total Calculator
-- Average Calculator
+what you think by the name of it obviously it just find and it is very simple 
+
+```bash
+find [location] [flags]...
+```
+
+lets talk about some flags 
+
+-type - this set the type of things we need to look for commenly f for file and d for dirs something like this 
+
+```bash
+find . -type f
+find . -type d
+```
+
+-name - specify the name or from what it start or end by using * in
+
+```bash
+find . -type f -name "cat"
+find . -type d -name "*sh"
+find . -name "*.png"
+```
+
+-iname - it is same as -name just ignore the upper or lower cases
+
+-maxdepth - this one is good shhii.. with this we can set the level to dig in only for example with this we can just see the things in level one of the tree 
+
+```bash
+find . -maxdepth 1
+```
+
+-empty - this is jackas.. just gonna show the empty files or dirs 
 
 ---
 
-# Remember
+## 6. sort
 
-You DO NOT need to memorize every AWK feature.
+this thing just sort out the output of things in alphabatical order and case sensitive by default
 
-Know these well:
+```bash
+sort [flags]...
+```
 
-- Fields
-- Variables
-- BEGIN / END
-- NR / NF / $NF
-- Conditions
-- Counting
-- Summing
-- Average
-- print / printf
+-r - just reverse the sorted output 
 
-Everything else can be looked up when needed.
+-n - use to sort numbers actually not wierdly
+
+-u - remove unique chars (repetitive chars or maybe something more unique shi...)
+
+---
+
+## 7. uniq
+
+this remove the repetitive chars that are in order kinda suck i think but most of the time pair it with sort or just use sort -u and uniq -c flag just add the amount of time the char get uniqued typa shit like 5 apple...
+
+---
+
+## 8. wc
+
+this is word count simple as hell without any flag it shows the line word bytes but with flags we can specify
+
+```bash
+wc [flags]...
+```
+
+-l - just print the amount of lines
+
+-w - just print the amount of words 
+
+-c - just prints the bytes
+
+---
+
+## 9. xargs
+
+i think this as a wild card cause it can conver the output of something to run with command i know what i am saying is completely bad but here is the example
+
+```bash
+echo "chicken steak wagyu" | xargs echo
+find . -type f -name "*.tmp" | xargs rm 
+```
+
+in second command you can see that firs when find commands run it list the files like ./eafbia.tmp then xargs execute its work by adding rm at start something like rm ./eafbia.tmp 

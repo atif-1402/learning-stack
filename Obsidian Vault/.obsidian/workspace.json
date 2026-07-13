@@ -23,7 +23,7 @@
                   "sortOrder": "alphabetical",
                   "showSearch": false,
                   "searchQuery": "",
-                  "backlinkCollapsed": false,
+                  "backlinkCollapsed": true,
                   "unlinkedCollapsed": true
                 }
               },
@@ -195,8 +195,10 @@
   },
   "active": "598446a88351a7dc",
   "lastOpenFiles": [
-    "Bash Notes/Usefull Commands (Must!).md",
     "Bash Notes/1. Introduction.md",
+    "Bash Notes/Usefull Commands (Must!).md",
+    "Pasted image 20260703005136.png",
+    "Pasted image 20260702164843.png",
     "Bash Notes/Process Substitution.md",
     "Bash Notes/Pagers.md",
     "Bash Notes/If Else statements.md",
@@ -207,9 +209,7 @@
     "Bash Notes/Conditionals.md",
     "Bash Notes/Functions.md",
     "Bash Notes/Loops.md",
-    "Pasted image 20260702164843.png",
     "Bash Notes/Man Pages (manuals of tui).md",
-    "Pasted image 20260703005136.png",
     "Pasted image 20260703010522.png",
     "Bash-Notes/Pagers.md",
     "Bash-Notes",
@@ -226,7 +226,6 @@
     "K&R C/11 - Appendix C - Summary of Changes.md",
     "K&R C/10 - Appendix B - Standard Library.md",
     "K&R C/09 - Appendix A - Reference Manual.md",
-    "K&R C/08 - Chapter 8 - The UNIX System Interface.md",
     "K&R C",
     "Learning C/K&R C Programming Language",
     "Quickshell/handson",
