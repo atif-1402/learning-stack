@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+awk -F',' '
+  BEGIN {
+    printf "=====FOOD ANALYZER=====\n"
+  }
+  {
+    total+=$2
+    count++
+  }
+  END {
+    printf "Total Items : " count "\n"
+    printf "Expensive "'

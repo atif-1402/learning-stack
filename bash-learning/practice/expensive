@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+awk -F',' '
+  BEGIN {
+    printf "==== EXPENSIVE MENU ====\n"
+  }
+  {
+    if ($2 >= 200) {
+      print $1, $2 
+      count++
+    }
+  }
+  END {
+    printf "------------------------\n"
+    printf "Total Expensive Items: " count
+  }' <../assets/food.csv

@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+awk -F',' '
+  BEGIN {
+    printf "=====PEOPLE=====\n"
+  }
+  NR > 1 {
+    printf $1 "\n"
+    count++
+  }
+  END {
+    printf "----------------\n"
+    printf "Total People: " count
+  }' <../assets/simple.csv

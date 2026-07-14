@@ -100,6 +100,12 @@ echo "biryani korma kebab steak biryani" | sed 's/biryani/lamb/g'
 ```bash
 sed -i 's/OLD/NEW/flag' file.txt
 ```
+
+-e - it is use to do multiple expression something like 
+
+```bash
+sed -e 's/OLD/NEW/' -e 's/NEW/FUTURE/'
+```
 ---
 ## 4. awk
 
