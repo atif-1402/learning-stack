@@ -5,9 +5,20 @@ awk -F',' '
     printf "=====FOOD ANALYZER=====\n"
   }
   {
+    if ($2 >= 200) {
+      count1++
+    }
+    count2++
     total+=$2
-    count++
+    if ($2 > 200) {
+      max_food=$1
+      max_price=$2
+    }
   }
   END {
-    printf "Total Items : " count "\n"
-    printf "Expensive "'
+    printf "Total Items : %d\n", count2
+    printf "Expensive   : %d\n", count1
+    printf "Average     : %.1f\n", total / count2
+    printf "Most Expensive :\n"
+    printf "%s ₹%d\n", max_food, max_price
+  }' <../assets/food.csv
