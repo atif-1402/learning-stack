@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "6dc5fc81ffc902fe",
+        "id": "b053079b1887e56a",
         "type": "tabs",
         "children": [
           {
-            "id": "598446a88351a7dc",
+            "id": "314c0f8ddc26ae39",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Bash Notes/Usefull Commands (Must!).md",
+                "file": "Learning C/1) The Basic of C.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -23,12 +23,12 @@
                   "sortOrder": "alphabetical",
                   "showSearch": false,
                   "searchQuery": "",
-                  "backlinkCollapsed": true,
+                  "backlinkCollapsed": false,
                   "unlinkedCollapsed": true
                 }
               },
               "icon": "lucide-file",
-              "title": "Usefull Commands (Must!)"
+              "title": "1) The Basic of C"
             }
           }
         ]
@@ -193,22 +193,24 @@
       "bases:Create new base": false
     }
   },
-  "active": "598446a88351a7dc",
+  "active": "314c0f8ddc26ae39",
   "lastOpenFiles": [
-    "Bash Notes/1. Introduction.md",
-    "Bash Notes/Usefull Commands (Must!).md",
-    "Pasted image 20260703005136.png",
-    "Pasted image 20260702164843.png",
+    "Learning C/2) Varibles in C.md",
+    "Learning C/1) The Basic of C.md",
     "Bash Notes/Process Substitution.md",
     "Bash Notes/Pagers.md",
-    "Bash Notes/If Else statements.md",
-    "Bash Notes/Arrays.md",
-    "Bash Notes/Arithmetic Expressions in Bash.md",
-    "Bash Notes/Case Statements.md",
-    "Bash Notes/IFS Vars.md",
-    "Bash Notes/Conditionals.md",
-    "Bash Notes/Functions.md",
     "Bash Notes/Loops.md",
+    "Bash Notes/IFS Vars.md",
+    "Bash Notes/If Else statements.md",
+    "Bash Notes/Conditionals.md",
+    "Bash Notes/Case Statements.md",
+    "Bash Notes/Arithmetic Expressions in Bash.md",
+    "Bash Notes/Usefull Commands (Must!).md",
+    "Bash Notes/1. Introduction.md",
+    "Pasted image 20260703005136.png",
+    "Pasted image 20260702164843.png",
+    "Bash Notes/Arrays.md",
+    "Bash Notes/Functions.md",
     "Bash Notes/Man Pages (manuals of tui).md",
     "Pasted image 20260703010522.png",
     "Bash-Notes/Pagers.md",
@@ -218,11 +220,9 @@
     "Untitled",
     "Bash Notes",
     "K&R C/K&R C - Map of Content.md",
-    "Learning C/2) Varibles in C.md",
     "K&R C/01 - Chapter 1 - A Tutorial Introduction.md",
     "K&R C/02 - Chapter 2 - Types Operators and Expressions.md",
     "K&R C/00 - Preface.md",
-    "Learning C/1) The Basic of C.md",
     "K&R C/11 - Appendix C - Summary of Changes.md",
     "K&R C/10 - Appendix B - Standard Library.md",
     "K&R C/09 - Appendix A - Reference Manual.md",
