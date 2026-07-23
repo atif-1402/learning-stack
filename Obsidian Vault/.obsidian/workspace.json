@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Learning C/1) The Basic of C.md",
+                "file": "Bash Notes/Arrays.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "1) The Basic of C"
+              "title": "Arrays"
             }
           }
         ]
@@ -195,22 +195,22 @@
   },
   "active": "314c0f8ddc26ae39",
   "lastOpenFiles": [
-    "Learning C/2) Varibles in C.md",
-    "Learning C/1) The Basic of C.md",
-    "Bash Notes/Process Substitution.md",
-    "Bash Notes/Pagers.md",
-    "Bash Notes/Loops.md",
+    "Bash Notes/Arithmetic Expressions in Bash.md",
     "Bash Notes/IFS Vars.md",
+    "Bash Notes/Loops.md",
     "Bash Notes/If Else statements.md",
+    "Bash Notes/Functions.md",
     "Bash Notes/Conditionals.md",
     "Bash Notes/Case Statements.md",
-    "Bash Notes/Arithmetic Expressions in Bash.md",
-    "Bash Notes/Usefull Commands (Must!).md",
+    "Bash Notes/Arrays.md",
     "Bash Notes/1. Introduction.md",
+    "Learning C/1) The Basic of C.md",
+    "Learning C/2) Varibles in C.md",
+    "Bash Notes/Process Substitution.md",
+    "Bash Notes/Pagers.md",
+    "Bash Notes/Usefull Commands (Must!).md",
     "Pasted image 20260703005136.png",
     "Pasted image 20260702164843.png",
-    "Bash Notes/Arrays.md",
-    "Bash Notes/Functions.md",
     "Bash Notes/Man Pages (manuals of tui).md",
     "Pasted image 20260703010522.png",
     "Bash-Notes/Pagers.md",

@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+names=("Atif" "Alex" "John" "Bob")
+
+for idx in "${!names[@]}"; do
+  echo "$((idx + 1)) -> ${names[$idx]}"
+done

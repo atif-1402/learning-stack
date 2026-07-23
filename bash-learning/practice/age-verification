@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+if [[ -n $1 ]]; then
+  age=$1
+else
+  read -p "Enter your age: " age
+fi
+
+if ((age >= 18)); then
+  echo "You are eligible."
+else
+  echo "get out of here brat"
+fi
