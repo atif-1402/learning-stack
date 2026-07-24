@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Bash Notes/Arrays.md",
+                "file": "Bash Notes/Process Substitution.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Arrays"
+              "title": "Process Substitution"
             }
           }
         ]
@@ -195,23 +195,23 @@
   },
   "active": "314c0f8ddc26ae39",
   "lastOpenFiles": [
-    "Bash Notes/Arithmetic Expressions in Bash.md",
-    "Bash Notes/IFS Vars.md",
     "Bash Notes/Loops.md",
-    "Bash Notes/If Else statements.md",
-    "Bash Notes/Functions.md",
-    "Bash Notes/Conditionals.md",
-    "Bash Notes/Case Statements.md",
-    "Bash Notes/Arrays.md",
     "Bash Notes/1. Introduction.md",
-    "Learning C/1) The Basic of C.md",
-    "Learning C/2) Varibles in C.md",
-    "Bash Notes/Process Substitution.md",
+    "Bash Notes/Arrays.md",
+    "Bash Notes/If Else statements.md",
     "Bash Notes/Pagers.md",
+    "Bash Notes/Functions.md",
+    "Bash Notes/Case Statements.md",
     "Bash Notes/Usefull Commands (Must!).md",
+    "Bash Notes/Process Substitution.md",
+    "Learning C/1) The Basic of C.md",
+    "Bash Notes/Man Pages (manuals of tui).md",
+    "Bash Notes/IFS Vars.md",
+    "Bash Notes/Arithmetic Expressions in Bash.md",
+    "Bash Notes/Conditionals.md",
+    "Learning C/2) Varibles in C.md",
     "Pasted image 20260703005136.png",
     "Pasted image 20260702164843.png",
-    "Bash Notes/Man Pages (manuals of tui).md",
     "Pasted image 20260703010522.png",
     "Bash-Notes/Pagers.md",
     "Bash-Notes",
