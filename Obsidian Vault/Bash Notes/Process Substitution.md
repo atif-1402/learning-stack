@@ -1,3 +1,4 @@
+
 We use process substitution because when we use a pipeline (`|`) with a `while` loop, Bash creates a **subshell**.
 
 Example:

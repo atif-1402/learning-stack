@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-#!/usr/bin/env bash
-
 declare -A laptop
 
 laptop[cpu]="i5-5300U"

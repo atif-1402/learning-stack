@@ -30,8 +30,33 @@
               "icon": "lucide-file",
               "title": "Process Substitution"
             }
+          },
+          {
+            "id": "483058051d408947",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Bash Notes/Usefull Commands (Must!).md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Usefull Commands (Must!)"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -193,22 +218,23 @@
       "bases:Create new base": false
     }
   },
-  "active": "314c0f8ddc26ae39",
+  "active": "483058051d408947",
   "lastOpenFiles": [
+    "Bash Notes/Case Statements.md",
+    "Bash Notes/Conditionals.md",
+    "Bash Notes/Usefull Commands (Must!).md",
+    "NIOS Class 12 Math Blueprint (50+ marks).md",
+    "Bash Notes/Process Substitution.md",
     "Bash Notes/Loops.md",
     "Bash Notes/1. Introduction.md",
     "Bash Notes/Arrays.md",
     "Bash Notes/If Else statements.md",
     "Bash Notes/Pagers.md",
     "Bash Notes/Functions.md",
-    "Bash Notes/Case Statements.md",
-    "Bash Notes/Usefull Commands (Must!).md",
-    "Bash Notes/Process Substitution.md",
     "Learning C/1) The Basic of C.md",
     "Bash Notes/Man Pages (manuals of tui).md",
     "Bash Notes/IFS Vars.md",
     "Bash Notes/Arithmetic Expressions in Bash.md",
-    "Bash Notes/Conditionals.md",
     "Learning C/2) Varibles in C.md",
     "Pasted image 20260703005136.png",
     "Pasted image 20260702164843.png",
