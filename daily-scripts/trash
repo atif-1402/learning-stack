@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+args=$@
+
+case $args in
+list)
+  cd ~/.trash
+  echo "Total: $(ls | wc -l)"
+  echo "----------"
+  ls -a | tr " " "\t" | sed '1,2d'
+  exit 1
+  ;;
+clear)
+  rm -rf ~/.trash/*
+  exit 1
+  ;;
+*)
+  file=$@
+
+  if [[ -d ~/.trash ]]; then
+    :
+  else
+    mkdir ~/.trash
+  fi
+
+  if [[ $# -eq 0 ]]; then
+    exit 1
+  else
+    mv $file ~/.trash
+  fi
+  ;;
+esac

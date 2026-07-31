@@ -21,16 +21,38 @@ lc="󰜘 Last Commit "
 
 for dev in "$@"; do
   case "$dev" in
-  "-project site")
+
+  "-site")
     loading
+    printf "%${COLUMNS}s" | tr ' ' '-'
     echo "$sff"
     ls ~/anom/
-    echo
+    printf "%${COLUMNS}s" | tr ' ' '-'
     echo "$gs"
     git -C ~/anom status
     echo
     echo "$lc"
     git -C ~/anom log --oneline -1
+    printf "%${COLUMNS}s" | tr ' ' '-'
+    echo "TIP: cd to $(pwd)"
+    printf "%${COLUMNS}s" | tr ' ' '-'
     ;;
+
+  "-learn")
+    loading
+    printf "%${COLUMNS}s" | tr ' ' '-'
+    echo "$sff"
+    ls ~/learning/
+    printf "%${COLUMNS}s" | tr ' ' '-'
+    echo "$gs"
+    git -C ~/learning/ status
+    echo
+    echo "$lc"
+    git -C ~/learning/ log --oneline -1
+    printf "%${COLUMNS}s" | tr ' ' '-'
+    echo "TIP: cd to $(cd learning/ | pwd) "
+    printf "%${COLUMNS}s" | tr ' ' '-'
+    ;;
+
   esac
 done

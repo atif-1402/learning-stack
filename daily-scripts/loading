@@ -15,7 +15,7 @@ for dev in "$@"; do
     sleep 0.5
     echo -ne "\r\033[2K Loading"
 
-    echo "Yay Loading works"
+    printf "\nYay Loading works"
     ;;
   esac
 done
