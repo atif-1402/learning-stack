@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Bash Notes/Usefull Commands (Must!).md",
+                "file": "Maths/Sets.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Usefull Commands (Must!)"
+              "title": "Sets"
             }
           }
         ],
@@ -222,10 +222,12 @@
   },
   "active": "483058051d408947",
   "lastOpenFiles": [
+    "Bash Notes/Usefull Commands (Must!).md",
+    "Maths/Sets.md",
+    "NIOS Class 12 Math Blueprint (50+ marks).md",
+    "Maths",
     "Bash Notes/Case Statements.md",
     "Bash Notes/Conditionals.md",
-    "Bash Notes/Usefull Commands (Must!).md",
-    "NIOS Class 12 Math Blueprint (50+ marks).md",
     "Bash Notes/Process Substitution.md",
     "Bash Notes/Loops.md",
     "Bash Notes/1. Introduction.md",
@@ -245,7 +247,6 @@
     "Bash-Notes",
     "Bash.md",
     "Pagers.md",
-    "Untitled",
     "Bash Notes",
     "K&R C/K&R C - Map of Content.md",
     "K&R C/01 - Chapter 1 - A Tutorial Introduction.md",
@@ -253,7 +254,6 @@
     "K&R C/00 - Preface.md",
     "K&R C/11 - Appendix C - Summary of Changes.md",
     "K&R C/10 - Appendix B - Standard Library.md",
-    "K&R C/09 - Appendix A - Reference Manual.md",
     "K&R C",
     "Learning C/K&R C Programming Language",
     "Quickshell/handson",
