@@ -6,6 +6,11 @@ else
   read -p 'Enter Script Name: ' script
 fi
 
+if [[ -f $script ]]; then
+  echo "ERROR: a file with this name already exists."
+  exit 1
+fi
+
 touch $script
 chmod +x $script
 

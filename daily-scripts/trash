@@ -24,6 +24,7 @@ clear)
   fi
 
   if [[ $# -eq 0 ]]; then
+    echo "[ERROR]: No file/flags specified"
     exit 1
   else
     mv $file ~/.trash

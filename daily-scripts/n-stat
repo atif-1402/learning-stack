@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+notify-send "Instant Status" "Date & Time: $(date "+%I:%M %p - %D")\nUptime: $(uptime | tr -s ' ' | sed -e 's/ /-/g' -e 's/:/h /g' -e 's/,/m/g' | cut -d'-' -f4)"

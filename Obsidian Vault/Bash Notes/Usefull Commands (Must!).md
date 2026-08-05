@@ -117,11 +117,11 @@ it is a text-processing language used for extracting,analyzing, formatting, and 
 
 Think of the Unix tools like this:
 
-| Tool | Purpose |
-|------|---------|
-| `cut` | Extract columns |
-| `tr` | Transform characters |
-| `sed` | Edit text |
+| Tool  | Purpose                 |
+| ----- | ----------------------- |
+| `cut` | Extract columns         |
+| `tr`  | Transform characters    |
+| `sed` | Edit text               |
 | `awk` | Process structured text |
 
 Common uses:
@@ -730,7 +730,6 @@ wc [flags]...
 -c - just prints the bytes
 
 ---
-
 ## 9. xargs
 
 i think this as a wild card cause it can conver the output of something to run with command i know what i am saying is completely bad but here is the example
@@ -740,4 +739,4 @@ echo "chicken steak wagyu" | xargs echo
 find . -type f -name "*.tmp" | xargs rm 
 ```
 
-in second command you can see that firs when find commands run it list the files like ./eafbia.tmp then xargs execute its work by adding rm at start something like rm ./eafbia.tmp 
+in second command you can see that firs when find commands run it list the files like ./eafbia.tmp then xargs execute its work by adding rm at start something like rm ./eafbia.tmp
