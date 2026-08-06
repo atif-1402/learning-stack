@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+
+arg=$1
+
+usage() {
+  echo "usage: temp [FLAG]"
+  echo
+  echo "[FLAGS]"
+  echo "    -f : to create files"
+  echo "    -d : to create directories"
+}
+
+case "$arg" in
+-f)
+  type=touch
+  format=files
+  ;;
+-d)
+  type=mkdir
+  format=dirs
+  ;;
+*)
+  usage
+  exit 0
+  ;;
+esac
+
+read -p "Enter Amount: " amount
+
+if ((amount < 1 || amount > 99)); then
+  echo "[ERROR]: amount should be in numbers and between 1 to 99"
+  exit 0
+fi
+
+i=0
+
+until [[ $i == $amount ]]; do
+  ((i++))
+  $type "$format-$i"
+done
+
+echo "Created $i $format"

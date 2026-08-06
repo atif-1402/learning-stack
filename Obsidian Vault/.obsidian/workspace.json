@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Maths/Sets.md",
+                "file": "Bash Notes/Arithmetic Expressions in Bash.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Sets"
+              "title": "Arithmetic Expressions in Bash"
             }
           }
         ],
@@ -220,15 +220,15 @@
       "bases:Create new base": false
     }
   },
-  "active": "478dd1705d76196c",
+  "active": "483058051d408947",
   "lastOpenFiles": [
-    "Bash Notes/Arrays.md",
+    "Bash Notes/Conditionals.md",
     "Maths/Sets.md",
+    "Bash Notes/Arrays.md",
     "Bash Notes/Usefull Commands (Must!).md",
     "NIOS Class 12 Math Blueprint (50+ marks).md",
     "Maths",
     "Bash Notes/Case Statements.md",
-    "Bash Notes/Conditionals.md",
     "Bash Notes/Process Substitution.md",
     "Bash Notes/Loops.md",
     "Bash Notes/1. Introduction.md",
