@@ -77,7 +77,7 @@
               "state": {
                 "sortOrder": "alphabetical",
                 "autoReveal": false,
-                "showSearch": false,
+                "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
@@ -220,10 +220,11 @@
       "bases:Create new base": false
     }
   },
-  "active": "483058051d408947",
+  "active": "478dd1705d76196c",
   "lastOpenFiles": [
-    "Bash Notes/Usefull Commands (Must!).md",
+    "Bash Notes/Arrays.md",
     "Maths/Sets.md",
+    "Bash Notes/Usefull Commands (Must!).md",
     "NIOS Class 12 Math Blueprint (50+ marks).md",
     "Maths",
     "Bash Notes/Case Statements.md",
@@ -231,7 +232,6 @@
     "Bash Notes/Process Substitution.md",
     "Bash Notes/Loops.md",
     "Bash Notes/1. Introduction.md",
-    "Bash Notes/Arrays.md",
     "Bash Notes/If Else statements.md",
     "Bash Notes/Pagers.md",
     "Bash Notes/Functions.md",
