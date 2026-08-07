@@ -1,4 +1,13 @@
 {
   "cssTheme": "Minimal",
-  "accentColor": "#7655c3"
+  "accentColor": "",
+  "theme": "system",
+  "baseFontSize": 20,
+  "baseFontSizeAction": true,
+  "showViewHeader": false,
+  "showRibbon": true,
+  "nativeMenus": false,
+  "interfaceFontFamily": "",
+  "textFontFamily": "",
+  "monospaceFontFamily": ""
 }

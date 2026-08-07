@@ -12,12 +12,13 @@ usage() {
 
 case "$arg" in
 -f)
-  type=touch
-  format=files
+  type="touch"
+  format="file"
+  read -p "File Format (eg: .txt): " format_name
   ;;
 -d)
-  type=mkdir
-  format=dirs
+  type="mkdir"
+  format="dirs"
   ;;
 *)
   usage
@@ -25,7 +26,7 @@ case "$arg" in
   ;;
 esac
 
-read -p "Enter Amount: " amount
+read -p "Enter Amount [1-99]: " amount
 
 if ((amount < 1 || amount > 99)); then
   echo "[ERROR]: amount should be in numbers and between 1 to 99"
@@ -36,7 +37,7 @@ i=0
 
 until [[ $i == $amount ]]; do
   ((i++))
-  $type "$format-$i"
+  "$type" "$format-$i$format_name"
 done
 
 echo "Created $i $format"
