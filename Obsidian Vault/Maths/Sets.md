@@ -672,30 +672,30 @@ $$n(\text{exactly two of } A,B,C) = n(A\cap B) + n(B \cap C) + n(A \cap C) - 3\c
 
 ## 🔷 SECTION 15: SYMBOLS QUICK-REFERENCE SHEET
 
-|Symbol|Meaning|
-|---|---|
-|$\in$|belongs to / is an element of|
-|$\notin$|does not belong to|
-|$\subseteq$|subset of (or equal)|
-|$\subset$|proper subset of|
-|$\not\subseteq$|not a subset of|
-|$\supseteq$|superset of|
-|$\cup$|union|
-|$\cap$|intersection|
-|$-$ or $\setminus$|difference|
-|$'$ (e.g. $A'$)|complement|
-|$\emptyset$ or ${}$|empty/null set|
-|$U$|universal set|
-|$P(A)$|power set of $A$|
-|$n(A)$|cardinal number (count of elements) of $A$|
-|$\mid$ or $:$|"such that" (used in set-builder notation)|
-|$\mathbb{N}$|natural numbers|
-|$W$|whole numbers|
-|$\mathbb{Z}$|integers|
-|$\mathbb{Z}^+$|positive integers|
-|$\mathbb{Q}$|rational numbers|
-|$\mathbb{R}$|real numbers|
-|$\mathbb{R}-\mathbb{Q}$|irrational numbers|
+| Symbol                  | Meaning                                    |
+| ----------------------- | ------------------------------------------ |
+| $\in$                   | belongs to / is an element of              |
+| $\notin$                | does not belong to                         |
+| $\subseteq$             | subset of (or equal)                       |
+| $\subset$               | proper subset of                           |
+| $\not\subseteq$         | not a subset of                            |
+| $\supseteq$             | superset of                                |
+| $\cup$                  | union                                      |
+| $\cap$                  | intersection                               |
+| $-$ or $\setminus$      | difference                                 |
+| $'$ (e.g. $A'$)         | complement                                 |
+| $\emptyset$ or ${}$     | empty/null set                             |
+| $U$                     | universal set                              |
+| $P(A)$                  | power set of $A$                           |
+| $n(A)$                  | cardinal number (count of elements) of $A$ |
+| $\mid$ or $:$           | "such that" (used in set-builder notation) |
+| $\mathbb{N}$            | natural numbers                            |
+| $W$                     | whole numbers                              |
+| $\mathbb{Z}$            | integers                                   |
+| $\mathbb{Z}^+$          | positive integers                          |
+| $\mathbb{Q}$            | rational numbers                           |
+| $\mathbb{R}$            | real numbers                               |
+| $\mathbb{R}-\mathbb{Q}$ | irrational numbers                         |
 
 ---
 

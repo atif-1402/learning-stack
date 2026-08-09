@@ -7,7 +7,7 @@ list)
   cd ~/.trash
   echo "Total: $(ls | wc -l)"
   echo "----------"
-  ls -a | tr " " "\t" | sed '1,2d'
+  ls -a | tr ' ' '\t' | sed '1,2d'
   exit 1
   ;;
 clear)
@@ -27,7 +27,7 @@ clear)
     echo "[ERROR]: No file/flags specified"
     exit 1
   else
-    mv $file ~/.trash
+    mv "$file" ~/.trash
   fi
   ;;
 esac
