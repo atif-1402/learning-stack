@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+name="Atif"
+hour=$(date +%H)
+good="Good"
+
+if ((hour >= 5 && hour <= 11)); then
+  greeting="Morning"
+elif ((hour >= 12 && hour <= 16)); then
+  greeting="Afternoon"
+elif ((hour >= 17 && hour <= 20)); then
+  greeting="Evening"
+else
+  greeting="Night"
+fi
+
+figlet -d ~/.local/share/figlet/fonts -f "miniwi" "$good $greeting, $name"
+echo "Happy Session :)  $(date '+%I:%M %p — %a  %D')"
+
+# terminus_dots
+# Calvin S
+# miniwi
