@@ -27,7 +27,7 @@ clear)
     echo "[ERROR]: No file/flags specified"
     exit 1
   else
-    mv "$file" ~/.trash
+    mv $file ~/.trash
   fi
   ;;
 esac

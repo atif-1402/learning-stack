@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+if [[ $# -lt 2 ]]; then
+  echo "[ERROR]: no arguments"
+  exit 0
+fi
+
+message=$1
+time=$2
+
+if [[ $time == *s || $time == *m || $time == *h ]]; then
+  notify-send "Reminder set" "$1"
+  sleep "$time"
+  notify-send "Reminder" "$message"
+else
+  target=$(date +%s)
+  given=$(date -d "$2" +%s)
+  seconds=$((given - target))
+
+  if [[ $seconds == -* ]]; then
+    echo "[ERROR]: Invalid time"
+    echo "         Set correct future time"
+    exit 0
+  fi
+
+  notify-send "Reminder set" "$1"
+  sleep "$seconds"
+  notify-send "Reminder" "$message"
+fi

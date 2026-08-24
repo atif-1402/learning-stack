@@ -1,0 +1,252 @@
+#!/usr/bin/env bash
+
+PORT=45454
+CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/pulse"
+DEVICES_FILE="$CONFIG_DIR/devices"
+
+mkdir -p "$CONFIG_DIR"
+touch "$DEVICES_FILE"
+
+usage() {
+  cat <<EOF
+Usage:
+  pulse -m "Device1,Device2" "Message"
+  pulse -m "Message"
+  pulse -set "Device Name" IP
+  pulse -remove "Device Name"
+  pulse -list
+
+Examples:
+  pulse -m "moto,rmx" "Checking"
+  pulse -m "moto" "Hello"
+  pulse -m "Hello everyone"
+
+Options:
+  -m, --message TARGETS MESSAGE
+                          Send to specific devices
+  -m, --message MESSAGE  Send to ALL devices
+  -set, --set DEVICE IP  Save/update a device
+  -remove, --remove DEVICE
+                          Remove a device
+  -list, --list          List saved devices
+  -h, --help             Show this help
+EOF
+}
+
+valid_ip() {
+  [[ "$1" =~ ^([0-9]{1,3}\.){3}[0-9]{1,3}$ ]] || return 1
+
+  IFS='.' read -r a b c d <<<"$1"
+
+  ((a <= 255 && b <= 255 && c <= 255 && d <= 255))
+}
+
+set_device() {
+  local name="$1"
+  local ip="$2"
+
+  if [[ -z "$name" || -z "$ip" ]]; then
+    echo "pulse: device name and IP are required"
+    exit 1
+  fi
+
+  if ! valid_ip "$ip"; then
+    echo "pulse: invalid IP address: $ip"
+    exit 1
+  fi
+
+  awk -F'|' -v name="$name" '$1 != name' "$DEVICES_FILE" \
+    >"${DEVICES_FILE}.tmp"
+
+  echo "${name}|${ip}" >>"${DEVICES_FILE}.tmp"
+
+  mv "${DEVICES_FILE}.tmp" "$DEVICES_FILE"
+
+  echo "Saved: $name → $ip"
+}
+
+remove_device() {
+  local name="$1"
+
+  if [[ -z "$name" ]]; then
+    echo "pulse: device name is required"
+    exit 1
+  fi
+
+  awk -F'|' -v name="$name" '$1 != name' "$DEVICES_FILE" \
+    >"${DEVICES_FILE}.tmp"
+
+  mv "${DEVICES_FILE}.tmp" "$DEVICES_FILE"
+
+  echo "Removed: $name"
+}
+
+list_devices() {
+  if [[ ! -s "$DEVICES_FILE" ]]; then
+    echo "No devices configured."
+    return
+  fi
+
+  echo "Pulse devices:"
+  echo
+
+  while IFS='|' read -r name ip; do
+    [[ -z "$name" ]] && continue
+    printf "  %-25s %s\n" "$name" "$ip"
+  done <"$DEVICES_FILE"
+}
+
+get_ip() {
+  local name="$1"
+
+  awk -F'|' -v name="$name" '$1 == name {print $2; exit}' "$DEVICES_FILE"
+}
+
+send_to_device() {
+  local name="$1"
+  local message="$2"
+  local ip
+
+  ip=$(get_ip "$name")
+
+  if [[ -z "$ip" ]]; then
+    echo "pulse: device not configured: $name" >&2
+    return 1
+  fi
+
+  local payload="${name}|${message}"
+
+  if printf '%s' "$payload" | nc -u -w1 "$ip" "$PORT"; then
+    echo "✓ Sent to $name"
+    return 0
+  else
+    echo "✗ Failed to send to $name" >&2
+    return 1
+  fi
+}
+
+confirm_all() {
+  local message="$1"
+
+  echo
+  echo "This will send:"
+  echo
+  echo "  \"$message\""
+  echo
+  echo "to ALL devices:"
+  echo
+
+  while IFS='|' read -r name ip; do
+    [[ -z "$name" ]] && continue
+    echo "  • $name ($ip)"
+  done <"$DEVICES_FILE"
+
+  echo
+  read -r -p "Continue? [Y/n]: " answer
+
+  case "${answer,,}" in
+  "" | y | yes)
+    return 0
+    ;;
+
+  n | no)
+    echo "Cancelled."
+    exit 1
+    ;;
+
+  *)
+    echo "Please answer y or n."
+    confirm_all "$message"
+    ;;
+  esac
+}
+
+send_message() {
+  local targets="$1"
+  local message="$2"
+
+  if [[ -z "$message" ]]; then
+    # No target supplied → send to everyone
+    message="$targets"
+    targets="*"
+  fi
+
+  if [[ ! -s "$DEVICES_FILE" ]]; then
+    echo "pulse: no devices configured."
+    exit 1
+  fi
+
+  # ALL DEVICES
+  if [[ "$targets" == "*" ]]; then
+    confirm_all "$message"
+
+    local failed=0
+
+    while IFS='|' read -r name ip; do
+      [[ -z "$name" ]] && continue
+
+      if ! send_to_device "$name" "$message"; then
+        failed=1
+      fi
+    done <"$DEVICES_FILE"
+
+    return "$failed"
+  fi
+
+  # SPECIFIC DEVICES
+  IFS=',' read -ra devices <<<"$targets"
+
+  for device in "${devices[@]}"; do
+    # Remove accidental spaces
+    device="${device#"${device%%[![:space:]]*}"}"
+    device="${device%"${device##*[![:space:]]}"}"
+
+    if [[ -z "$device" ]]; then
+      continue
+    fi
+
+    send_to_device "$device" "$message"
+  done
+}
+
+case "$1" in
+
+-set | --set)
+  set_device "$2" "$3"
+  ;;
+
+-remove | --remove)
+  remove_device "$2"
+  ;;
+
+-list | --list)
+  list_devices
+  ;;
+
+-m | --message)
+  shift
+
+  if [[ $# -eq 1 ]]; then
+    # pulse -m "Message"
+    send_message "$1"
+  elif [[ $# -eq 2 ]]; then
+    # pulse -m "moto,rmx" "Message"
+    send_message "$1" "$2"
+  else
+    echo 'Usage: pulse -m "Device1,Device2" "Message"'
+    echo '   or: pulse -m "Message"'
+    exit 1
+  fi
+  ;;
+
+-h | --help | "")
+  usage
+  ;;
+
+*)
+  echo "pulse: unknown option: $1"
+  echo "Try 'pulse --help'."
+  exit 1
+  ;;
+
+esac

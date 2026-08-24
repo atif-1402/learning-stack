@@ -1,18 +1,45 @@
 #!/usr/bin/env bash
 
 loading() {
-  echo -ne "\r Loading"
-  sleep 0.25
-  echo -ne "\r Loading"
-  sleep 0.25
-  echo -ne "\r Loading"
-  sleep 0.25
-  echo -ne "\r Loading"
-  sleep 0.25
-  echo -ne "\r Loading"
-  sleep 0.25
-  echo -ne "\r Loading"
-  echo -ne "\r\033[2K"
+  echo -ne "\r⠋ Loading"
+  sleep 0.15
+  echo -ne "\r⠙ Loading"
+  sleep 0.15
+  echo -ne "\r⠹ Loading"
+  sleep 0.15
+  echo -ne "\r⠸ Loading"
+  sleep 0.15
+  echo -ne "\r⠼ Loading"
+  sleep 0.15
+  echo -ne "\r⠴ Loading"
+  sleep 0.15
+  echo -ne "\r⠦ Loading"
+  sleep 0.15
+  echo -ne "\r⠧ Loading"
+  sleep 0.15
+  echo -ne "\r⠇ Loading"
+  sleep 0.15
+  echo -ne "\r⠏ Loading"
+  sleep 0.15
+  echo -ne "\r⠋ Loading"
+  sleep 0.15
+  echo -ne "\r⠙ Loading"
+  sleep 0.15
+  echo -ne "\r⠹ Loading"
+  sleep 0.15
+  echo -ne "\r⠸ Loading"
+  sleep 0.15
+  echo -ne "\r⠼ Loading"
+  sleep 0.15
+  echo -ne "\r⠴ Loading"
+  sleep 0.15
+  echo -ne "\r⠦ Loading"
+  sleep 0.15
+  echo -ne "\r⠧ Loading"
+  sleep 0.15
+  echo -ne "\r⠇ Loading"
+  sleep 0.15
+  echo -ne "\r⠏ Loading" echo -ne "\r\033[2K"
 }
 
 sff=" Site Folder Files "
@@ -24,34 +51,34 @@ for dev in "$@"; do
 
   "-site")
     loading
-    printf "%${COLUMNS}s" | tr ' ' '-'
+    printf "%${COLUMNS}s" | awk '{gsub(/ /, "─"); print}'
     echo "$sff"
     ls ~/anom/
-    printf "%${COLUMNS}s" | tr ' ' '-'
+    printf "%${COLUMNS}s" | awk '{gsub(/ /, "─"); print}'
     echo "$gs"
     git -C ~/anom status
     echo
     echo "$lc"
     git -C ~/anom log --oneline -1
-    printf "%${COLUMNS}s" | tr ' ' '-'
+    printf "%${COLUMNS}s" | awk '{gsub(/ /, "─"); print}'
     echo "TIP: cd to $(pwd)"
-    printf "%${COLUMNS}s" | tr ' ' '-'
+    printf "%${COLUMNS}s" | awk '{gsub(/ /, "─"); print}'
     ;;
 
   "-learn")
     loading
-    printf "%${COLUMNS}s" | tr ' ' '-'
+    printf "%${COLUMNS}s" | awk '{gsub(/ /, "─"); print}'
     echo "$sff"
     ls ~/learning/
-    printf "%${COLUMNS}s" | tr ' ' '-'
+    printf "%${COLUMNS}s" | awk '{gsub(/ /, "─"); print}'
     echo "$gs"
     git -C ~/learning/ status
     echo
     echo "$lc"
     git -C ~/learning/ log --oneline -1
-    printf "%${COLUMNS}s" | tr ' ' '-'
+    printf "%${COLUMNS}s" | awk '{gsub(/ /, "─"); print}'
     echo "TIP: cd to $(cd learning/ | pwd) "
-    printf "%${COLUMNS}s" | tr ' ' '-'
+    printf "%${COLUMNS}s" | awk '{gsub(/ /, "─"); print}'
     ;;
 
   esac

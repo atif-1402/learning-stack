@@ -1,0 +1,48 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+DESC_A="Analog Stereo Duplex"
+DESC_B="Digital Stereo (HDMI) Output + Analog Stereo Input"
+
+get_key() {
+  local desc="$1"
+  local line
+  line=$(pactl list cards | grep -F "${desc} (sinks" | head -n1)
+  [[ -z "$line" ]] && return 1
+  line="${line#"${line%%[![:space:]]*}"}" # trim leading whitespace
+  echo "${line%%: *}"                     # everything before ": " is the key
+}
+
+# Assumes a single sound card. If you have more than one, hardcode CARD below.
+CARD=$(pactl list cards short | awk '{print $2; exit}')
+ACTIVE=$(pactl list cards | grep "Active Profile:" | awk '{print $3}' | head -n1)
+
+KEY_A=$(get_key "$DESC_A")
+KEY_B=$(get_key "$DESC_B")
+
+if [[ -z "$KEY_A" || -z "$KEY_B" ]]; then
+  notify-send "Audio Profile Switch" "Couldn't find one of the profiles — check descriptions with 'pactl list cards'"
+  exit 1
+fi
+
+if [[ "$ACTIVE" == "$KEY_A" ]]; then
+  NEW="$KEY_B"
+  LABEL="$DESC_B"
+else
+  NEW="$KEY_A"
+  LABEL="$DESC_A"
+fi
+
+pactl set-card-profile "$CARD" "$NEW"
+notify-send "  Audio Profile" "Switched to: $LABEL"
+
+state="$(playerctl status 2>&1 || true)"
+
+if [[ $state == "No players found" ]]; then
+  :
+elif [[ $state == "Playing" ]]; then
+  playerctl play
+else
+  playerctl stop
+fi
+

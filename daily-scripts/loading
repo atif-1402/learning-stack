@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-loading() {
+for dev in "$@"; do
+  case "$dev" in
+  site)
     echo -ne "\r Loading"
     sleep 0.5
     echo -ne "\r Loading"
@@ -14,6 +16,6 @@ loading() {
     echo -ne "\r\033[2K Loading"
 
     printf "\nYay Loading works"
-  }
-
-loading
+    ;;
+  esac
+done
