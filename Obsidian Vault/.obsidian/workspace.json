@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Bash Notes/Usefull Commands (Must!).md",
+                "file": "Maths/2. Relation and Functions.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Usefull Commands (Must!)"
+              "title": "2. Relation and Functions"
             }
           }
         ]
@@ -125,12 +125,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "K&R C/K&R C - Map of Content.md",
+                "file": "Maths/Sets.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from K&R C - Map of Content"
+              "title": "Outgoing links"
             }
           },
           {
@@ -168,21 +168,21 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "K&R C/K&R C - Map of Content.md",
+                "file": "Maths/2. Relation and Functions.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of K&R C - Map of Content"
+              "title": "Outline"
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 326.30322265625
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -197,16 +197,18 @@
   },
   "active": "aa2792c5a192b406",
   "lastOpenFiles": [
-    "Bash Notes/Arithmetic Expressions in Bash.md",
+    "Maths/1. Sets.md",
+    "Maths/2. Relation and Functions.md",
+    "Untitled.md",
+    "Bash Notes/Arrays.md",
     "Bash Notes/Usefull Commands (Must!).md",
-    "Maths/Sets.md",
+    "Bash Notes/Arithmetic Expressions in Bash.md",
     "Pasted image 20260807181341.png",
     "Pasted image 20260702164843.png",
     "Pasted image 20260703005136.png",
     "Pasted image 20260703010522.png",
     "Bash Notes/Process Substitution.md",
     "Bash Notes/Conditionals.md",
-    "Bash Notes/Arrays.md",
     "NIOS Class 12 Math Blueprint (50+ marks).md",
     "Maths",
     "Bash Notes/Case Statements.md",
@@ -228,7 +230,6 @@
     "K&R C/01 - Chapter 1 - A Tutorial Introduction.md",
     "K&R C/02 - Chapter 2 - Types Operators and Expressions.md",
     "K&R C/00 - Preface.md",
-    "K&R C/11 - Appendix C - Summary of Changes.md",
     "K&R C",
     "Learning C/K&R C Programming Language",
     "Quickshell/handson",
