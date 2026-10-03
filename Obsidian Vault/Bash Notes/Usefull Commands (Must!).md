@@ -19,7 +19,7 @@ lets talk about some most useful option/flags
 echo "abc123xyz" | cut -c1-3
 ``` 
 
-# to learn more check MAN page
+### to learn more check MAN page
 
 ---
 ## 2. tr

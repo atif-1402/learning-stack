@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Maths/2. Relation and Functions.md",
+                "file": "Bash Notes/Usefull Commands (Must!).md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2. Relation and Functions"
+              "title": "Usefull Commands (Must!)"
             }
           }
         ]
@@ -168,9 +168,9 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Maths/2. Relation and Functions.md",
+                "file": "Bash Notes/Usefull Commands (Must!).md",
                 "followCursor": false,
-                "showSearch": false,
+                "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
@@ -195,10 +195,10 @@
       "bases:Create new base": false
     }
   },
-  "active": "aa2792c5a192b406",
+  "active": "9b3c9ac811431d75",
   "lastOpenFiles": [
-    "Maths/1. Sets.md",
     "Maths/2. Relation and Functions.md",
+    "Maths/1. Sets.md",
     "Untitled.md",
     "Bash Notes/Arrays.md",
     "Bash Notes/Usefull Commands (Must!).md",
